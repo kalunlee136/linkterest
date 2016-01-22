@@ -1,0 +1,25 @@
+
+<div class="col-md-8 col-md-offset-2" >
+    <h2 style="text-align:center">Favorite Linkings </h2>
+    <hr>
+    
+      <div class="grid">
+            <div class="grid-width"></div>
+
+            <div class="grid-item" ng-repeat="link in favorites">
+              <img ng-src="{{link.url}}" err-src="http://www.dingdingtv.com/wp-content/uploads/2016/01/default_post_img2.png"/>
+              <h4>{{link.title}}</h4>
+              <a class="glyphicon grid-name" ng-href="#/users/{{link.user_id}}">{{link.user}}</a>
+              <a class="glyphicon glyphicon-paperclip like">{{link.favorites}}</a>
+              <a class="glyphicon glyphicon-heart like">{{link.upvotes}}</a>
+            </div>
+      </div>
+      
+      
+      <div ng-hide="isLoggedIn()">
+        <h3>You need to <a href="/#/login">Log In</a> or <a href="/#/register">Register</a> before you can add a post.</h3>
+      </div>
+
+</div>
+  
+ <ui-sref></ui-sref>

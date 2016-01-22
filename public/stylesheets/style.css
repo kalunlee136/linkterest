@@ -1,0 +1,109 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+h1 {
+	font:Helvetica, Sans-serif;
+	color: #333;
+  text-align:center;
+}
+
+h2{
+  text-align:center;
+}
+
+h4{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* ---- isotope ---- */
+
+.grid{
+  width:100%;
+  max-width:1200px;
+  margin: 0 auto;
+  padding-left: 1%;
+
+}
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer{
+  width:23.33%;
+}
+.grid-item {
+  background-color:#DDD;
+  width: 23.33%;
+  min-width:240px;
+  float: left;
+  margin:3px;
+  text-align:center;
+  border-radius: 0.5em;
+}
+
+
+.grid-item img {
+  display: block;
+  padding: 20px;
+  max-width: 100%;
+  width:100%;
+}
+
+.grid-name{
+  float: left;
+  margin-left: 10px;
+}
+
+.like{
+  float:right;
+  margin-top:10px;
+  margin-right:10px;
+  margin-bottom:10px;
+  font-size: 14px;
+}
+
+/* bootstrap */
+.glyphicon-heart{
+  vertical-align:middle;
+}
+
+.glyphicon{
+  margin-top: -0.5px;
+  color:rgba(0, 0, 0, 0.56);;
+}
+
+.glyphicon:hover{
+  cursor:pointer;
+  text-decoration:none;
+  color:black;
+}
+
+.navbar-default {
+    background-color: white;
+}
+
+.form-horizontal {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}

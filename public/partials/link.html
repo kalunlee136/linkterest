@@ -1,0 +1,42 @@
+<div class="col-md-6 col-md-offset-3">
+    <h3>Submit a new link!</h3>
+    <form class="form-horizontal" ng-submit="addLink()">
+        <div class="form-group">
+            <label class="col-sm-2 control-label"> Title </label>
+            <div class="col-sm-6 col-md-6">
+              <input type="text" class="form-control" ng-model="title" placeholder="Title">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label class="col-sm-2 control-label"> Link </label>
+            <div class="col-sm-6 col-md-6">
+              <input type="text" class="form-control" ng-model="url" placeholder="URL link">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+    <hr>
+   
+   <h3>Your previous submitted links</h3>
+   <div class="grid">
+        <div class="grid-width"></div>
+
+        <div class="grid-item" ng-repeat="link in userlinks">
+          <img ng-src="{{link.url}}" err-src="http://www.dingdingtv.com/wp-content/uploads/2016/01/default_post_img2.png"/>
+          <h4>{{link.title}}</h4>
+          <a class="glyphicon  glyphicon-remove grid-name" ng-click="delete($index)"></a>
+          <a class="glyphicon glyphicon-heart like">{{link.upvotes}}</a>
+        </div>
+  </div>
+      
+   <div ng-hide="isLoggedIn()">
+        <h3>You need to <a href="/#/login">Log In</a> or <a href="/#/register">Register</a> before you can add a post.</h3>
+   </div>
+    
+</div>

@@ -1,0 +1,22 @@
+<div class="col-md-8 col-md-offset-2" >
+      <h2 style="text-align:center">Other Linkings </h2>
+      <hr>    
+      
+      <div class="grid">
+            <div class="grid-width"></div>
+
+            <div class="grid-item" ng-repeat="link in links">
+              <img ng-src="{{link.url}}"/>
+              <h4>{{link.title}}</h4>
+              <a class="glyphicon grid-name" >{{link.user}}</a>
+              <a class="glyphicon glyphicon-heart like">{{link.upvotes}}</a>
+            </div>
+      </div>
+      
+      <div ng-hide="isLoggedIn()">
+        <h3>You need to <a href="/#/login">Log In</a> or <a href="/#/register">Register</a> before you can add a post.</h3>
+      </div>
+
+    </div>
+  
+ <ui-sref></ui-sref>

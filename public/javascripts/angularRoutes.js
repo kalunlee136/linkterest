@@ -2,7 +2,7 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlR
     $stateProvider
       //linking page
       .state('home', {
-        url: '/',
+        url: '',
         views:{
           'body':{templateUrl: 'partials/home.html', controller: 'MainCtrl'}
         },

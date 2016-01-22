@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 
-//var port= 3000 || process.env.PORT;
+var port= process.env.PORT || 3000 ;
 var routes = require('./routes/index');
 
 var app = express();
@@ -32,5 +32,7 @@ app.use(passport.initialize());
 
 routes(app);
 
+app.listen(port);
 
-module.exports = app;
+console.log('listening to port: '+port);
+

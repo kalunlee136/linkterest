@@ -21,7 +21,7 @@ require('./models/Users');
 require('./config/passport');
 
 mongodb://dbuser:dbpass@host:port/dbname
-mongoose.connect('mongodb://kalunlee136:564213ab@ds041571.mongolab.com:41571/linkterest');
+mongoose.connect('mongodb://localhost/linkterest');
 
 
 app.use(logger('dev'));

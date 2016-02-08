@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>Linkterest</title>
-    
+  
   <link href="../stylesheets/style.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -13,7 +13,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
   <script src="/javascripts/angularApp.js"></script>
   <script src="/javascripts/angularRoutes.js"></script>
-
+  
+  <base href="/">
 </head>
 <body ng-app="flapperNews">
   
@@ -34,8 +35,8 @@
         
         <div class="navbar-collapse collapse ">
           <ul class="nav navbar-nav navbar-right">
-            <li ng-show="isLoggedIn()"><a href="/#/link">Your linkings</a></li>
-            <li ng-show="isLoggedIn()"><a ng-href="/#/profile/{{currentUserID()}}">Favorites</a></li>
+            <li ng-show="isLoggedIn()"><a href="/link">Your linkings</a></li>
+            <li ng-show="isLoggedIn()"><a ng-href="/profile/{{currentUserID()}}">Favorites</a></li>
             <li ng-show="isLoggedIn()"><a href="">Hello {{currentUser()}} !</a></li>   
             <li ng-show="isLoggedIn()"><a href="" ng-click="logOut()">Log Out</a></li>
             <li ng-hide="isLoggedIn()"><a href="/#/login">Log In</a></li>

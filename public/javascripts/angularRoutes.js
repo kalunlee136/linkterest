@@ -1,8 +1,8 @@
-app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
+app.config(['$stateProvider','$urlRouterProvider','$locationProvider',function($stateProvider, $urlRouterProvider,$locationProvider) {
     $stateProvider
       //linking page
       .state('home', {
-        url: '',
+        url: '/',
         views:{
           'body':{templateUrl: 'partials/home.html', controller: 'MainCtrl'}
         },
@@ -78,7 +78,10 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlR
           }]
          }
       })
-      
+      $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+      });
     $urlRouterProvider.otherwise('');
 }]);
 
